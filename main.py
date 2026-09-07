@@ -1,5 +1,5 @@
 from statistics import mean, sd_pop
-import munpy as np
+import numpy as np
 z_values = []
 while len(z_values) <10000:
   z=np.random.normal(0,1)
