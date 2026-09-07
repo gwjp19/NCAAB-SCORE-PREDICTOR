@@ -1,4 +1,4 @@
-from statistics import mean, sd_pop
+from stat_stuff import mean, sd_pop
 import numpy as np
 z_values = []
 while len(z_values) <10000:
