@@ -1,4 +1,4 @@
-#messy_rn_but_im+working 
+#messy_rn_but_im_working 
 n = len(data)
 mean = sum(data) / n
 squared_diff = [(x - mean) ** 2 for x in data]
