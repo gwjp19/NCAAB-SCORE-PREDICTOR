@@ -50,3 +50,5 @@ for i in range(5):
   orba1_list.append(orba1)
 #//////////
 
+print(fga1_list)
+
