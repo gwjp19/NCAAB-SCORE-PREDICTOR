@@ -7,8 +7,8 @@ while len(z_values) <10000:
     z_values.append(z)
 
 sim_fga1 =[]
-for z in z values:
+for z in z_values:
   pfga = mean + (sd_pop * z)
-  sim_.fga1.append(pfga)
+  sim_fga1.append(pfga)
 
 
