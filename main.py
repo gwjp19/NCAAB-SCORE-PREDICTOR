@@ -10,5 +10,7 @@ sim_fga1 =[]
 for z in z_values:
   pfga = mean + (sd_pop * z)
   sim_fga1.append(pfga)
-
+n=len(sim_fga1)
+fga1_mean = sum(sim_fga1) / n
+print(fga1_mean)
 
