@@ -1,3 +1,4 @@
+from Data_inputs import fga1_list
 print(fga1_list)
 n = len(fga1_list)
 mean = sum(fga1_list) / n
