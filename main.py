@@ -1,4 +1,4 @@
-from stat_stuff import mean, sd_pop
+from stat_stuff import mean, sd_pop, fgaa1mean, fgaa1_sd_pop, fd1mean, fd1_sd_pop, fc1mean, fc1_sd_pop, tv1mean, tv1_sd_pop, tvf1mean, tvf1_sd_pop, orb1mean, orb1_sd_pop, drb1mean, drb1_sd_pop, drba1mean, drba1_sd_pop, orba1mean, orba1_sd_pop
 import numpy as np
 z_values = []
 while len(z_values) <10000:
