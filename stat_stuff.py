@@ -26,3 +26,17 @@ fc1_squared_diff = [(x-fc1mean) ** 2 for x in fc1_list]
 fc1_variance_pop = sum(fc1_squared_diff) / fc1n
 fc1_sd_pop = fc1_variance_pop ** 0.5
 #////////////////
+from Data_inputs import tv1_list
+tv1n = len(tv1_list)
+tv1mean = sum(tv1_list) / n
+tv1_squared_diff = [(x-tv1mean) ** 2 for x in tv1_list]
+tv1_variance_pop = sum(tv1_squared_diff) / tv1n
+tv1_sd_pop = tv1_variance_pop ** 0.5
+#////////////////
+from Data_inputs import tvf1_list
+tvf1n = len(tvf1_list)
+tvf1mean = sum(tvf1_list) / n
+tvf1_squared_diff = [(x-tvf1mean) ** 2 for x in tvf1_list]
+tvf1_variance_pop = sum(tvf1_squared_diff) / tvf1n
+tvf1_sd_pop = variance_pop ** 0.5
+#////////////////
