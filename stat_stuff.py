@@ -9,7 +9,7 @@ from Data_inputs import fgaa1_list
 fgaa1n = len(fgaa1_list)
 fgaa1mean = sum(fgaa1_list) / fgaa1n
 fgaa1_squared_diff = [(x-fgaa1mean) ** 2 for x in fgaa1_list]
-fgaa1_variance_pop = sum(fgaa1_squared_diff2 / fgaa1n
+fgaa1_variance_pop = sum(fgaa1_squared_diff) / fgaa1n
 fgaa1_sd_pop = fgaa1_variance_pop ** 0.5
 #////////////////
 from Data_inputs import fd1_list
