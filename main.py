@@ -5,12 +5,24 @@ while len(z_values) <10000:
   z=np.random.normal(0,1)
   if -3 <= z <= 3:
     z_values.append(z)
-
+#///////////
 sim_fga1 =[]
 for z in z_values:
-  pfga = mean + (sd_pop * z)
-  sim_fga1.append(pfga)
+  pfga1 = mean + (sd_pop * z)
+  sim_fga1.append(pfga1)
 n=len(sim_fga1)
 fga1_mean = sum(sim_fga1) / n
-print(fga1_mean)
-
+#//////////
+sim_fgaa1 =[]
+for z in z_values:
+  pfgaa1 = fgaa1mean + (fgaa1_sd_pop * z)
+  sim_fgaa1.append(pfgaa1)
+fgaa1n=len(sim_fgaa1)
+fgaa1_mean = sum(sim_fgaa1) / fgaa1n
+#///////////
+sim_fd1 =[]
+for z in z_values:
+  pfd1 = fd1mean + (fd1_sd_pop * z)
+  sim_fd1.append(pfd1)
+fd1n=len(sim_fd1)
+fd1_mean = sum(sim_fd1) / fd1n
