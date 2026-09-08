@@ -12,7 +12,7 @@ for z in z_values:
   sim_fga1.append(pfga1)
 n=len(sim_fga1)
 fga1_mean = sum(sim_fga1) / n
-print("Simulated FGA Average is: " + fga1_mean)
+print("Simulated FGA Average is: " + str(fga1_mean))
 #//////////
 sim_fgaa1 =[]
 for z in z_values:
@@ -20,7 +20,7 @@ for z in z_values:
   sim_fgaa1.append(pfgaa1)
 fgaa1n=len(sim_fgaa1)
 fgaa1_mean = sum(sim_fgaa1) / fgaa1n
-print("Simulated FGAA Average is: " + fgaa1_mean)
+print("Simulated FGAA Average is: " + str(fgaa1_mean))
 #///////////
 sim_fd1 =[]
 for z in z_values:
@@ -28,4 +28,4 @@ for z in z_values:
   sim_fd1.append(pfd1)
 fd1n=len(sim_fd1)
 fd1_mean = sum(sim_fd1) / fd1n
-print("Simulated Fouls Drawn Average is: " + fd1_mean)
+print("Simulated Fouls Drawn Average is: " + str(fd1_mean))
