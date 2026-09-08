@@ -38,5 +38,19 @@ tvf1n = len(tvf1_list)
 tvf1mean = sum(tvf1_list) / n
 tvf1_squared_diff = [(x-tvf1mean) ** 2 for x in tvf1_list]
 tvf1_variance_pop = sum(tvf1_squared_diff) / tvf1n
-tvf1_sd_pop = variance_pop ** 0.5
+tvf1_sd_pop = tvf1_variance_pop ** 0.5
+#////////////////
+from Data_inputs import orb1_list
+orb1n = len(orb1_list)
+orb1mean = sum(orb1_list) / orb1n
+orb1_squared_diff = [(x-orb1mean) ** 2 for x in orb1_list]
+orb1_variance_pop = sum(orb1_squared_diff) / orb1n
+orb1_sd_pop = orb1_variance_pop ** 0.5
+#////////////////
+from Data_inputs import drb1_list
+drb1n = len(drb1_list)
+drb1mean = sum(drb1_list) / drb1n
+drb1_squared_diff = [(x-drb1mean) ** 2 for x in drb11_list]
+drb1_variance_pop = sum(drb1_squared_diff) / drb1n
+drb1_sd_pop = drb1_variance_pop ** 0.5
 #////////////////
