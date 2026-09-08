@@ -50,7 +50,21 @@ orb1_sd_pop = orb1_variance_pop ** 0.5
 from Data_inputs import drb1_list
 drb1n = len(drb1_list)
 drb1mean = sum(drb1_list) / drb1n
-drb1_squared_diff = [(x-drb1mean) ** 2 for x in drb11_list]
+drb1_squared_diff = [(x-drb1mean) ** 2 for x in drb1_list]
 drb1_variance_pop = sum(drb1_squared_diff) / drb1n
 drb1_sd_pop = drb1_variance_pop ** 0.5
+#////////////////
+from Data_inputs import drba1_list
+drba1n = len(drba1_list)
+drba1mean = sum(drba1_list) / drba1n
+drba1_squared_diff = [(x-drba1mean) ** 2 for x in drba1_list]
+drba1_variance_pop = sum(drba1_squared_diff) / drba1n
+drba1_sd_pop = drba1_variance_pop ** 0.5
+#////////////////
+from Data_inputs import orba1_list
+orba1n = len(orba1_list)
+orba1mean = sum(orba1_list) / orba1n
+orba1_squared_diff = [(x-orba1mean) ** 2 for x in orba1_list]
+orba1_variance_pop = sum(orba1_squared_diff) / orba1n
+orba1_sd_pop = orba1_variance_pop ** 0.5
 #////////////////
