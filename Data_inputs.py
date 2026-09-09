@@ -1,4 +1,4 @@
-name1 = input("Team Name:")
+name1 = input("having sex with wills mom:")
 fga1_list = []
 for i in range(5):
   fga1 = float(input(name1+" Fga for the last five games:"))
