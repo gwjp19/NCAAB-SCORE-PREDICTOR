@@ -68,3 +68,7 @@ orba1_squared_diff = [(x-orba1mean) ** 2 for x in orba1_list]
 orba1_variance_pop = sum(orba1_squared_diff) / orba1n
 orba1_sd_pop = orba1_variance_pop ** 0.5
 #////////////////
+orb1_percent = orb1mean / (orb1mean + drba1mean)
+#////////////////
+drb1_percent = drb1mean / (drb1mean + orba1mean)
+#////////////////
