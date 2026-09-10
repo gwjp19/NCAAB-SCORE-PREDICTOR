@@ -19,3 +19,5 @@ for pfd2 in sim_fd2:
   pft2_result = ((( pfd2 + (1.2 * pfc1)) / 2) * .44)
   pft2_results.append(pft2_result)
 #////////////
+porb1_results = []
+for porb
