@@ -50,7 +50,7 @@ for pfg1, pft1, porb1, ptv1 in zip(
   porb1_results,
   ptv1_results
 ):
-  p_possesion1 = (pfga1_results + (1.5 * pft1_results) - porb1_results + ptv1_results)
+  p_possesion1 = (random.choice(pfga1_results) + (1.5 * random.choice(pft1_results)) - random.choice(porb1_results) + random.choice(ptv1_results))
   p_possesions1.append(p_possesion1)
 #////////////
 p_possesions2 =[]
@@ -61,7 +61,7 @@ for pfg2, pft2, porb2, ptv2 in zip(
   porb2_results,
   ptv2_results
 ):
-  p_possesion2 = (pfga2_results + (1.5 * pft2_results) - porb2_results + ptv2_results)
+  p_possesion2 = (random.choice(pfga2_results) + (1.5 * random.choice(pft2_results)) - random.choice(porb2_results) + random.choice(ptv2_results))
   p_possesions2.append(p_possesion2)
 
 
