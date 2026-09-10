@@ -103,3 +103,8 @@ for i in range(5):
   orba2 = float(input(name2 + " Offensive rebounds allowed for the last five games:"))
   orba2_list.append(orba2)
 #//////////
+
+ppp1 = float(input(name1 + "s Points per possesion, from kenpom:"))
+papp1 = float(input(name1 + "s Points allowed per possesion, from kenpom:"))
+ppp2 = float(input(name2 + "s Points per possesion, from kenpom:"))
+papp2 = float(input(name2 + "s Points allowed per possesion, from kenpom:"))
