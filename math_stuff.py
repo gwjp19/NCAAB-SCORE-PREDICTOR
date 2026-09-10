@@ -19,6 +19,7 @@ for pfd2 in sim_fd2:
   pft2_result = ((( pfd2 + (1.2 * pfc1)) / 2) * .44)
   pft2_results.append(pft2_result)
 #////////////
+from stat_stuff.py import 
 porb1_results = []
 for porb1 in sim_orb1:
   porb1_result = 
