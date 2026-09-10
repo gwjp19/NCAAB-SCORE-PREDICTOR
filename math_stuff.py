@@ -1,4 +1,4 @@
-from main.py import pfga1, sim_fga1, pfga2, sim_fga2, pfd1, sim_fd1, pfd2, sim_fd1, pfc1, sim_pfc1, pfc2, sim_pfc2, porb1, sim_orb1, porb2, sim_orb2, 
+from main.py import pfga1, sim_fga1, pfga2, sim_fga2, pfd1, sim_fd1, pfd2, sim_fd1, pfc1, sim_pfc1, pfc2, sim_pfc2, porb1, sim_orb1, porb2, sim_orb2, pdrb1, sim_drb1, pdrb2, sim_drb2, porba1, sim_orba1, porba2, sim_orba2. pdrba1, sim_drba1, pdrba1, sim_drba2
 fga1_results = []
 for pfga1 in sim_fga1:
   fga1_result = ( pfga1 + (1.2 * pfgaa2) / 2.2)
@@ -24,3 +24,9 @@ porb1_results = []
 for porb1 in sim_orb1:
   porb1_result = (orb1_percent * ( porb1 + pdrba2)
   porb1_results.append(porb1_result)
+#////////////
+porb2_results = []
+for porb2 in sim_orb2:
+  porb2_result = (orb2_percent * ( porb2 + pdrba1)
+  porb2_results.append(porb2_result)
+#////////////
