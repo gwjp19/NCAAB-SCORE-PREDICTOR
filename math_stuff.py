@@ -1,4 +1,4 @@
-from main.py import pfga1, sim_fga1, pfga2, sim_fga2, pfd1, sim_fd1, pfd2, sim_fd1, pfc1, sim_pfc1, pfc2, sim_pfc2
+from main.py import pfga1, sim_fga1, pfga2, sim_fga2, pfd1, sim_fd1, pfd2, sim_fd1, pfc1, sim_pfc1, pfc2, sim_pfc2, porb1, sim_orb1, porb2, sim_orb2, 
 fga1_results = []
 for pfga1 in sim_fga1:
   fga1_result = ( pfga1 + (1.2 * pfgaa2) / 2.2)
@@ -20,4 +20,5 @@ for pfd2 in sim_fd2:
   pft2_results.append(pft2_result)
 #////////////
 porb1_results = []
-for porb
+for porb1 in sim_orb1:
+  porb1_result = 
