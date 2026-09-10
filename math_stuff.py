@@ -42,5 +42,26 @@ for ptv2 in sim_tv2:
   ptv2_results.append(ptv2_result)
 #////////////
 
-P_possesions =[]
+p_possesions1 =[]
+
+for pfg1, pft1, porb1, ptv1 in zip(
+  pfg1_results,
+  pft1_results,
+  porb1_results,
+  ptv1_results
+):
+  p_possesion1 = (pfga1_results + (1.5 * pft1_results) - porb1_results + ptv1_results)
+  p_possesions1.append(p_possesion1)
+#////////////
+p_possesions2 =[]
+
+for pfg2, pft2, porb2, ptv2 in zip(
+  pfg2_results,
+  pft2_results,
+  porb2_results,
+  ptv2_results
+):
+  p_possesion2 = (pfga2_results + (1.5 * pft2_results) - porb2_results + ptv2_results)
+  p_possesions2.append(p_possesion2)
+
 
