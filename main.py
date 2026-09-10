@@ -172,7 +172,15 @@ drba2_mean = sum(sim_drba2) / drba2n
 print("Simulated Fouls Drawn Average is: " + str(drba2_mean))
 #///////////
 
+from math_stuff.py import p_possesions1, p_possesions2
 
+print(name1+ "'s Lowest predicted possesions: ", np.min(p_possesions1))
+print(name1+ "'s Average predicted possesions: ", np.mean(p_possesions1))
+print(name1+ "'s Highest predicted possesions: ", np.max(p_possesions1))
+
+print(name2+ "'s Lowest predicted possesions: ", np.min(p_possesions2))
+print(name2+ "'s Average predicted possesions: ", np.mean(p_possesions2))
+print(name2+ "'s Highest predicted possesions: ", np.max(p_possesions2))
 
 
 
