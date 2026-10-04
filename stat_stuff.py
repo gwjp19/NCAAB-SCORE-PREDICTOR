@@ -1,4 +1,4 @@
-from database_imports.py  import games, team_data
+from Database_Imports.py  import games, team_data
 
 games["drb"] = (
   games["total_rebounds"] - games["offensive_rebounds"]
@@ -17,7 +17,7 @@ game_stats = games.groupby(["team_id"]).agg(
   orba = ("offensive_rebounds_allowed", list),
   tba = ("total_rebounds_allowed", list),
   tovf = ("turnovers_forced", list),
-  fd = ("fouls_drawn", list)
+  fd = ("fouls_drawn", list),
   drb = ("drb", list),
   drba = ("drba", list)
 ).reset_index()
