@@ -1,4 +1,4 @@
-from database_imports.py import games, team_data
+mfrom database_imports.py  import games, team_data
 
 games["drb"] = (
   games["total_rebounds"] - games["offensive_rebounds"]
@@ -30,3 +30,5 @@ def get_stats(data):
   sd = variance ** 0.5
 
   return mean, variance, sd
+
+print(get_stats.head(20))
