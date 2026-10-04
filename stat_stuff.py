@@ -1,10 +1,12 @@
 from database_imports.py import games, team_data
+
 games["drb"] = (
   games["total_rebounds"] - games["offensive_rebounds"]
 )
 games["drba"] = (
   games["total_rebounds_allowed"] - games["offensive_rebounds_allowed"]
 )
+
 game_stats = games.groupby(["team_id"]).agg(
   fga = ("feild_goals_attempted", list),
   orb = ("offensive_rebounds", list),
