@@ -141,16 +141,5 @@ team_data["sos_papp"] = (
     team_data["papp"] / team_data["opp_avg_adj_off"]
 )
 
-#print(team_data[["ppp", "papp", "off_adj", "def_adj", "sos_ppp", "sos_papp"]].head(20))
 
-print("Top Ten Offenses:")
-print(team_data.nlargest(20, "sos_ppp")[["team_name", "sos_ppp"]])
 
-print("Bottoms Ten Offenses")
-print(team_data.nsmallest(20, "sos_ppp")[["team_name", "sos_ppp"]])
-
-print("Bottom Ten Defenses:")
-print(team_data.nlargest(20, "sos_papp")[["team_name", "sos_papp"]])
-
-print("Top Ten Defenses")
-print(team_data.nsmallest(20, "sos_papp")[["team_name", "sos_papp"]])
