@@ -1,4 +1,4 @@
-mfrom database_imports.py  import games, team_data
+from database_imports.py  import games, team_data
 
 games["drb"] = (
   games["total_rebounds"] - games["offensive_rebounds"]
