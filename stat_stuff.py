@@ -29,6 +29,25 @@ def get_stats(data):
   variance = sum(squared_diff) / n
   sd = variance ** 0.5
 
-  return mean, variance, sd
+  return {
+    "mean" : mean,
+    "variance" : variance,
+    "sd" : sd,
+    "min" : min(data),
+    "max" : max(data)
+  }
 
-print(get_stats.head(20))
+stats = {}
+
+stats_columns = [
+  "fga", "orb", "tb", "tov", "pf",
+  "fgaa", "orba", "tba", "tovf",
+  "fd", "drb", "drba"
+]
+
+for _, row in game_stats.iterrows():
+  team_id = row["team_id"]
+  stats[team_id] = {}
+
+  for stat in stat_columns:
+    stats[team_id][stat] = get_stats(row[stat])
