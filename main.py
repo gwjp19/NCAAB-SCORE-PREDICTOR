@@ -36,3 +36,4 @@ sim_drb_b = simulated_stats(team_b_stats["drb"])
 sim_drba_b = simulated_stats(team_b_stats["drba"])
 sim_orbp_b = simulated_stats(team_b_stats["orb_per"])
 
+from math_stuff.py import pred_poss_a, pred_poss_b
