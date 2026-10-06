@@ -40,8 +40,8 @@ pred_tov_b = calculate_tov(sim_tov_b, sim_tovf_a)
 pred_fga_a = calculate_fga(sim_fga_a, sim_fgaa_b)
 pred_fga_b = calculate_fga(sim_fga_b, sim_fgaa_a)
 
-pred_ft_a = calculate_fga(sim_fd_a, sim_pf_b)
-pred_ft_b = calculate_fga(sim_fd_b, sim_pf_a)
+pred_ft_a = calculate_ft(sim_fd_a, sim_pf_b)
+pred_ft_b = calculate_ft(sim_fd_b, sim_pf_a)
 
 pred_orb_a = calculate_rb(sim_orb_a, sim_drba_a, sim_orbp_a)
 pred_orb_b = calculate_rb(sim_orb_b, sim_drba_b, sim_orbp_b)
