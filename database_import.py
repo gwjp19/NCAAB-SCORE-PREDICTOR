@@ -134,12 +134,35 @@ team_data["adj_papp"] = (
 )
 
 team_data["sos_ppp"] = (
-    team_data["ppp"] / team_data["opp_avg_adj_def"]
+    team_data["adj_ppp"] / team_data["opp_avg_adj_def"]
 )
 
 team_data["sos_papp"] = (
-    team_data["papp"] / team_data["opp_avg_adj_off"]
+    team_data["adj_papp"] / team_data["opp_avg_adj_off"]
 )
 
+matchups = matchups.merge(
+  team_data[["team_id", "sos_ppp", "sos_papp"]].rename(columns={
+    "team_id": "team_id_opp",
+    "sos_ppp": "opp_sos_ppp",
+    "sos_papp": "opp_sos_papp"
+    }),
+    on="team_id_opp",
+    how="left"
+)
 
+opp_avg_sos_ppp = matchups.groupby("team_id")["opp_sos_ppp"].mean()
+opp_avg_sos_papp = matchups.groupby("team_id")["opp_sos_papp"].mean()
+
+team_data = team_data.merge(
+  opp_avg_sos_ppp.rename("opp_avg_sos_ppp"),
+  on="team_id",
+  how="left"
+)
+
+team_data = team_data.merge(
+  opp_avg_sos_papp.rename("opp_avg_sos_papp"),
+  on="team_id",
+  how="left"
+)
 
