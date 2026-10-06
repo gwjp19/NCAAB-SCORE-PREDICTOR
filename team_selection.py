@@ -1,0 +1,12 @@
+from stat_stuff.py import game_stats, stats
+from database_import.py import team_data, games
+
+def select_teams():
+  team_a = int(input("Team A ID:"))
+  team_b = int(input("Team B ID:"))
+
+  return team_a, team_b, stats[team_a], stats[team_b]
+
+team_a, team_b, team_a_stats, team_b_stats = select_teams()
+
+selected_games = games[games["team_id"].isin([team_a, team_b])]
