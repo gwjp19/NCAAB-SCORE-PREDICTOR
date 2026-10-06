@@ -1,25 +1,6 @@
-from main.py import pfga1, sim_fga1, pfga2, sim_fga2, pfd1, sim_fd1, pfd2, sim_fd1, ptv1, sim_tv1, ptv2, sim_tv2, ptvf1, sim_tvf1, ptvf2, sim_tvf2
-from main.py import pfc1, sim_pfc1, pfc2, sim_pfc2, porb1, sim_orb1, porb2, sim_orb2, pdrb1, sim_drb1, pdrb2, sim_drb2, porba1, sim_orba1, porba2, sim_orba2. pdrba1, sim_drba1, pdrba1, sim_drba2
-fga1_results = []
-for pfga1 in sim_fga1:
-  fga1_result = ( pfga1 + (1.2 * pfgaa2) / 2.2)
-  fga1_results.append(fga1_result)
-#////////////
-fga2_results = []
-for pfga2 in sim_fga2:
-  fga2_result = ( pfga2 + (1.2 * pfgaa1) / 2.2)
-  fga2_results.append(fga2_result)
-#////////////
-pft1_results = []
-for pfd1 in sim_fd1:
-  pft1_result = ((( pfd1 + (1.2 * pfc2)) / 2) * .44)
-  pft1_results.append(pft1_result)
-#////////////
-pft2_results = []
-for pfd2 in sim_fd2:
-  pft2_result = ((( pfd2 + (1.2 * pfc1)) / 2) * .44)
-  pft2_results.append(pft2_result)
-#////////////
+from main.py import sim_fga_a, sim_fgaa_a, sim_orb_a, sim_orba_a, sim_tov_a, sim_tovf_a, sim_pf_a, sim_fd_a, sim_srb_a, sim_drba_a
+from main.py import sim_fga_b, sim_fgaa_b, sim_orb_b, sim_orba_b, sim_tov_b, sim_tovf_b, sim_pf_b, sim_fd_b, sim_srb_b, sim_drba_b
+
 from stat_stuff.py import orb1_percent, orb2_percent
 porb1_results = []
 for porb1 in sim_orb1:
@@ -41,6 +22,35 @@ for ptv2 in sim_tv2:
   ptv2_result = ((1.6 * ptv2)+(1.4 * ptvf1)) / 3
   ptv2_results.append(ptv2_result)
 #////////////
+def calculate_fga(team_values, opponent_values):
+  fga_results = []
+  
+  for team_value, opponent_value in zip(team_values, opponent_values):
+    fga = (team_value + 1.2 * opponent_value) / 2.2
+    fga_results.append(fga)
+    
+  return fgs_results
+
+pred_fga_a = calculate_fga(sin_fga_a, sim_fgaa_b)
+pred_fga_b = calculate_fga(sin_fga_b, sim_fgaa_a)
+
+def calculate_ft(team_values, opponent_values):
+  ft_results = []
+  
+  for team_value, opponent_value in zip(team_values, opponent_values):
+    ft = (team_value + 1.2 * opponenet_value) * 0.475
+    ft_results.appened(ft)
+    
+  return ft_results
+   
+pred_ft_a = calculate_fga(sim_fd_a, sim_pf_b)
+pred_ft_b = calculate_fga(sim_fd_b, sim_pf_a)
+
+def calculate_orbp(team_values, opponenet_values):
+  orbp_results = []
+  for team_value, opponent_value in zip(team_values, opponent_values):
+    orba = 
+
 
 p_possesions1 =[]
 
