@@ -11,7 +11,6 @@ def simulated_stats(stat_data):
       values.append(value)
     
   return values
-
 sim_fga_a = simulated_stats(team_a_stats["fga"])
 sim_fgaa_a = simulated_stats(team_a_stats["fgaa"])
 sim_orb_a = simulated_stats(team_a_stats["orb"])
@@ -22,6 +21,7 @@ sim_pf_a = simulated_stats(team_a_stats["pf"])
 sim_fd_a = simulated_stats(team_a_stats["fd"])
 sim_drb_a = simulated_stats(team_a_stats["drb"])
 sim_drba_a = simulated_stats(team_a_stats["drba"])
+orb_per_a = team_a_stats["orb"]["mean"] / (team_a_stats["orb"]["mean"] + team_a_stats["drba"]["mean"])
 
 
 sim_fga_b = simulated_stats(team_b_stats["fga"])
@@ -34,3 +34,4 @@ sim_pf_b = simulated_stats(team_b_stats["pf"])
 sim_fd_b = simulated_stats(team_b_stats["fd"])
 sim_drb_b = simulated_stats(team_b_stats["drb"])
 sim_drba_b = simulated_stats(team_b_stats["drba"])
+orb_per_b = team_b_stats["orb"]["mean"] / (team_b_stats["orb"]["mean"] + team_b_stats["drba"]["mean"])
