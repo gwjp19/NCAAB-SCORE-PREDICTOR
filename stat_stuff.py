@@ -7,6 +7,12 @@ games["drba"] = (
   games["total_rebounds_allowed"] - games["offensive_rebounds_allowed"]
 )
 
+games["orb%"] = (
+  games["orb"] / (games["orb"] + games["drba"])
+)
+games["orb%a"] = (
+  games["orba"] / (games["orba"] + games["drb"])
+)
 game_stats = games.groupby(["team_id"]).agg(
   fga = ("feild_goals_attempted", list),
   orb = ("offensive_rebounds", list),
@@ -19,7 +25,9 @@ game_stats = games.groupby(["team_id"]).agg(
   tovf = ("turnovers_forced", list),
   fd = ("fouls_drawn", list),
   drb = ("drb", list),
-  drba = ("drba", list)
+  drba = ("drba", list),
+  orb_per = ("orb%", list),
+  orb_pera = ("orb%a", list)
 ).reset_index()
 
 def get_stats(data):
@@ -42,7 +50,7 @@ stats = {}
 stats_columns = [
   "fga", "orb", "tb", "tov", "pf",
   "fgaa", "orba", "tba", "tovf",
-  "fd", "drb", "drba"
+  "fd", "drb", "drba", "orb_per", "orb_pera"
 ]
 
 for _, row in game_stats.iterrows():
