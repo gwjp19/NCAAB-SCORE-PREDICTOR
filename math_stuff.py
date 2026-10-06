@@ -55,3 +55,13 @@ def calculate_poss(first_values, second_values, third_values, fourth_values):
 
 pred_poss_a = calculate_poss(pred_fga_a, pred_ft_a, pred_orb_a, pred_tov_a)
 pred_poss_b = calculate_poss(pred_fga_b, pred_ft_b, pred_orb_b, pred_tov_b)
+
+def calculate_ppp(team_values, opponent_values):
+  ppp_results = []
+  for team_value, opponent_value in zip(team_values, opponent_values):
+    ppp = (1.2 * team_value + opponent_value) / 2.2
+    ppp_results.append(ppp)
+  return ppp_results
+
+pred_ppp_a
+pred_ppp_b
