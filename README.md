@@ -19,12 +19,18 @@ Efficiency is calculated using the player efficiency model, in which team perfor
 
 ### Current Limitations
 Noted shortcoming of the model are as follows:
+
 -All coefficients and variable relations are currently unoptimized
+
 -No current adjustments for Home and away games 
+
 -No player impact or player injury consideration
+
 -Expected efficiency is currently based on a single season average, not a range of possible values.
 
 ### Future Versions
--V1 is expected to be finished on Oct 21. It will include the following:
+V1 is expected to be finished on Oct 21. It will include the following:
+
 -Proper coefficients and variable relations (determined through xgboost)
+
 -Home/Away/Neutral court adjustments
