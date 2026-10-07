@@ -1,4 +1,9 @@
-from team_selection import select_teams, selected_games, team_a_name, team_b_name
+from team_selection import select_teams
+import numpy as np
+
+n = 10000
+
+team_a, team_b, team_a_stats, team_b_stats, team_a_name, team_b_name = select_teams()
 
 def simulated_stats(stat_data):
   values = []
