@@ -15,7 +15,5 @@ def select_teams():
 
   return team_a, team_b, stats[team_a], stats[team_b], team_a_name, team_b_name
 
-team_a, team_b, team_a_stats, team_b_stats = select_teams()
 
-selected_games = games[games["team_id"].isin([team_a, team_b])]
 
