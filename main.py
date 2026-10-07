@@ -39,4 +39,14 @@ sim_orbp_b = simulated_stats(team_b_stats["orb_per"])
 sim_ppp_b = simulated_stats(team_b_stats["ppp"])
 sim_papp_b = simulated_stats(team_b_stats["papp"])
 
-from math_stuff.py import pred_poss_a, pred_poss_b
+from math_stuff.py import pred_poss_a, pred_poss_b, pred_ppp_a, pred_ppp_b
+
+def calculate_score(poss_values, score_values):
+  score_results = []
+  for poss_value, socre_value in zip(poss_values, score_values):
+    score = poss_value * score_value
+    score_results.append(score)
+  return score_results
+
+pred_score_a = calculate_score(pred_poss_a, pred_ppp_a)
+pred_score_b = calculate_score(pred_poss_b, pred_ppp_b)
