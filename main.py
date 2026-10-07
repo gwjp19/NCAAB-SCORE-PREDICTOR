@@ -1,4 +1,4 @@
-from team_selection.py import select_teams, selected_games, team_a_name, team_b_name
+from team_selection import select_teams, selected_games, team_a_name, team_b_name
 
 def simulated_stats(stat_data):
   values = []
@@ -39,7 +39,7 @@ sim_orbp_b = simulated_stats(team_b_stats["orb_per"])
 sim_ppp_b = simulated_stats(team_b_stats["ppp"])
 sim_papp_b = simulated_stats(team_b_stats["papp"])
 
-from math_stuff.py import pred_poss_a, pred_poss_b, pred_ppp_a, pred_ppp_b
+from math_stuff import pred_poss_a, pred_poss_b, pred_ppp_a, pred_ppp_b
 
 def calculate_score(poss_values, score_values):
   score_results = []
