@@ -50,7 +50,7 @@ pred_orb_b = calculate_rb(sim_orb_b, sim_drba_b, sim_orbp_b)
 def calculate_poss(first_values, second_values, third_values, fourth_values):
   possesions = []
   for first_value, second_value, third_value, fourth_value in zip(first_values, second_values, third_values, fourth_values):
-    possesion = (random.choice(first_value) + (0.475 * random.choice(second_value)) - random.choice(third_value) + random.choice(fourth_value))
+    possesion = ((first_value) + (0.475 * (second_value)) - (third_value) + (fourth_value))
     possesions.append(possesion)
   return possesions
 
