@@ -1,5 +1,5 @@
-from main.py import sim_fga_a, sim_fgaa_a, sim_orb_a, sim_orba_a, sim_tov_a, sim_tovf_a, sim_pf_a, sim_fd_a, sim_srb_a, sim_drba_a, sim_orbp_a
-from main.py import sim_fga_b, sim_fgaa_b, sim_orb_b, sim_orba_b, sim_tov_b, sim_tovf_b, sim_pf_b, sim_fd_b, sim_srb_b, sim_drba_b, sim_orbp_a
+from main.py import sim_fga_a, sim_fgaa_a, sim_orb_a, sim_orba_a, sim_tov_a, sim_tovf_a, sim_pf_a, sim_fd_a, sim_srb_a, sim_drba_a, sim_orbp_a, sim_ppp_a, sim_papp_a
+from main.py import sim_fga_b, sim_fgaa_b, sim_orb_b, sim_orba_b, sim_tov_b, sim_tovf_b, sim_pf_b, sim_fd_b, sim_srb_b, sim_drba_b, sim_orbp_a, sim_ppp_b, sim_papp_b
 
 def calculate_fga(team_values, opponent_values):
   fga_results = []
@@ -63,5 +63,5 @@ def calculate_ppp(team_values, opponent_values):
     ppp_results.append(ppp)
   return ppp_results
 
-pred_ppp_a
-pred_ppp_b
+pred_ppp_a = calculate_ppp(sim_ppp_a, sim_papp_b)
+pred_ppp_b = calculate_ppp(sim_ppp_b, sim_papp_a)
