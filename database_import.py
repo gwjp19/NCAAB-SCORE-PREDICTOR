@@ -174,6 +174,6 @@ matchups = matchups.merge(
 )
 games = games.merge(
   matchups[["game_id", "team_id", "opp_avg_sos_papp", "opp_avg_sos_ppp"]],
-  on=["game_id, "team_id"],
+  on=["game_id", "team_id"],
   how = "left"
 )
