@@ -167,9 +167,9 @@ team_data = team_data.merge(
 )
 
 matchups = matchups.merge(
-  team_data[["team_id","opp_avg_sos_papp","opp_avg_sos_ppp"]],
-  left_on="team_id_opp",
-  right_on="team_id",
+  team_data[["team_id","opp_avg_sos_papp","opp_avg_sos_ppp"]].rename(columns={
+    "team_id": "team_id_opp"}),
+  pn="team_id_opp",
   how="left"
 )
 games = games.merge(
