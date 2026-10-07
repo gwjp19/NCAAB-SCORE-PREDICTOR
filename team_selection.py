@@ -1,5 +1,5 @@
-from stat_stuff.py import game_stats, stats
-from database_import.py import team_data, games
+from stat_stuff import game_stats, stats
+from database_import import team_data, games
 
 def select_teams():
   team_a = int(input("Team A ID:"))
