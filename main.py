@@ -50,3 +50,15 @@ def calculate_score(poss_values, score_values):
 
 pred_score_a = calculate_score(pred_poss_a, pred_ppp_a)
 pred_score_b = calculate_score(pred_poss_b, pred_ppp_b)
+
+def win_percentage(a_values, b_values):
+  a_wins = 0
+  for a_value, b_value in zip(a_values, b_values):
+    if a_value > b_value:
+      a_wins += 1
+  return a_wins / len(a_values)
+
+pred_wins = win_percentage(pred_score_a, pred_score_b)
+
+print(pred_wins)
+      
