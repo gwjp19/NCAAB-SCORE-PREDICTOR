@@ -166,3 +166,9 @@ team_data = team_data.merge(
   how="left"
 )
 
+games = games.merge(
+  team_data[["team_is", "opp_avg_sos_ppp", "opp_avg_sos_papp"]],
+  left_on = "team_id_opp",
+  right_on = "team_id",
+  how = "left"
+)
