@@ -1,4 +1,4 @@
-from team_selection.py import select_teams, selected_games, 
+from team_selection.py import select_teams, selected_games, team_a_name, team_b_name
 
 def simulated_stats(stat_data):
   values = []
@@ -60,5 +60,6 @@ def win_percentage(a_values, b_values):
 
 pred_wins = win_percentage(pred_score_a, pred_score_b)
 
-print(pred_wins)
-      
+print(f"TEAM A: {team_a_name} ({team_a})")
+print(f"TEAM B: {team_b_name} ({team_b})")
+print(f"WIN PROBABILITY: {pred_wins:.1%}")
