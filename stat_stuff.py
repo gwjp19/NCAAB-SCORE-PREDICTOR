@@ -8,10 +8,10 @@ games["drba"] = (
 )
 
 games["orb%"] = (
-  games["orb"] / (games["orb"] + games["drba"])
+  games["offensive_rebounds"] / (games["offensive_rebounds"] + games["drba"])
 )
 games["orb%a"] = (
-  games["orba"] / (games["orba"] + games["drb"])
+  games["offensive_rebounds_allowed"] / (games["offensive_rebounds_allowed"] + games["drb"])
 )
 
 games["adj_ppp"] = (
@@ -67,5 +67,5 @@ for _, row in game_stats.iterrows():
   team_id = row["team_id"]
   stats[team_id] = {}
 
-  for stat in stat_columns:
+  for stat in stats_columns:
     stats[team_id][stat] = get_stats(row[stat])
