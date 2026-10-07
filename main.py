@@ -22,7 +22,8 @@ sim_fd_a = simulated_stats(team_a_stats["fd"])
 sim_drb_a = simulated_stats(team_a_stats["drb"])
 sim_drba_a = simulated_stats(team_a_stats["drba"])
 sim_orbp_a = simulated_stats(team_a_stats["orb_per"])
-
+sim_ppp_a = simulated_stats(team_a_stats["ppp"])
+sim_papp_a = simulated_stats(team_a_stats["papp"])
 
 sim_fga_b = simulated_stats(team_b_stats["fga"])
 sim_fgaa_b = simulated_stats(team_b_stats["fgaa"])
@@ -35,5 +36,7 @@ sim_fd_b = simulated_stats(team_b_stats["fd"])
 sim_drb_b = simulated_stats(team_b_stats["drb"])
 sim_drba_b = simulated_stats(team_b_stats["drba"])
 sim_orbp_b = simulated_stats(team_b_stats["orb_per"])
+sim_ppp_b = simulated_stats(team_b_stats["ppp"])
+sim_papp_b = simulated_stats(team_b_stats["papp"])
 
 from math_stuff.py import pred_poss_a, pred_poss_b
