@@ -1,6 +1,7 @@
 from sim import sim_fga_a, sim_fgaa_a, sim_orb_a, sim_orba_a, sim_tov_a, sim_tovf_a, sim_pf_a, sim_fd_a, sim_drb_a, sim_drba_a, sim_orbp_a, sim_ppp_a, sim_papp_a
-from sim import sim_fga_b, sim_fgaa_b, sim_orb_b, sim_orba_b, sim_tov_b, sim_tovf_b, sim_pf_b, sim_fd_b, sim_drb_b, sim_drba_b, sim_orbp_a, sim_ppp_b, sim_papp_b
+from sim import sim_fga_b, sim_fgaa_b, sim_orb_b, sim_orba_b, sim_tov_b, sim_tovf_b, sim_pf_b, sim_fd_b, sim_drb_b, sim_drba_b, sim_orbp_b, sim_ppp_b, sim_papp_b
 import random
+import numpy as np
 
 def calculate_fga(team_values, opponent_values):
   fga_results = []
@@ -9,14 +10,14 @@ def calculate_fga(team_values, opponent_values):
     fga = (team_value + 1.2 * opponent_value) / 2.2
     fga_results.append(fga)
     
-  return fgs_results
+  return fga_results
 
 def calculate_ft(team_values, opponent_values):
   ft_results = []
   
   for team_value, opponent_value in zip(team_values, opponent_values):
-    ft = (team_value + 1.2 * opponenet_value) * 1.1
-    ft_results.appened(ft)
+    ft = (team_value + 1.2 * opponent_value) * 1.1
+    ft_results.append(ft)
     
   return ft_results
 
@@ -30,7 +31,7 @@ def calculate_rb(first_values, second_values, third_values):
 def calculate_tov(team_values, opponent_values):
   tov_results = []
   
-  for team_value, opponenet_value in zip(team_values, opponent_values):
+  for team_value, opponent_value in zip(team_values, opponent_values):
     tov = ((1.6 * team_value) + (1.4 * opponent_value)) / 3
     tov_results.append(tov)
   return tov_results
@@ -57,14 +58,20 @@ def calculate_poss(first_values, second_values, third_values, fourth_values):
 pred_poss_a = calculate_poss(pred_fga_a, pred_ft_a, pred_orb_a, pred_tov_a)
 pred_poss_b = calculate_poss(pred_fga_b, pred_ft_b, pred_orb_b, pred_tov_b)
 
-def calculate_ppp(team_values, opponent_values):
-  ppp_results = []
-  for team_value, opponent_value in zip(team_values, opponent_values):
-    ppp = (1.2 * team_value + opponent_value) / 2.2
-    ppp_results.append(ppp)
-  return ppp_results
 
-pred_ppp_a = calculate_ppp(sim_ppp_a, sim_papp_b)
-pred_ppp_b = calculate_ppp(sim_ppp_b, sim_papp_a)
+pred_ppp_a = (1.2 * sim_ppp_a + sim_papp_b) / 2.2
+pred_ppp_b = (1.2 * sim_ppp_b + sim_papp_a) / 2.2
+
+
+print("A offensive PPP:", np.mean(sim_ppp_a))
+print("A defensive PPP:", np.mean(sim_papp_a))
+print("B offensive PPP:", np.mean(sim_ppp_b))
+print("B defensive PPP:", np.mean(sim_papp_b))
+
+print("Predicted A PPP:", np.mean(pred_ppp_a))
+print("Predicted B PPP:", np.mean(pred_ppp_b))
+
+
+
 
 
