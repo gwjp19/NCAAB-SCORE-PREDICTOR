@@ -1,14 +1,15 @@
 from math_stuff import pred_poss_a, pred_poss_b, pred_ppp_a, pred_ppp_b
+from sim import team_a_name, team_a, team_b_name, team_b
 
-def calculate_score(poss_values, score_values):
-  score_results = []
-  for poss_value, socre_value in zip(poss_values, score_values):
-    score = poss_value * score_value
-    score_results.append(score)
-  return score_results
+points_a = []
+for pred_poss in pred_poss_a:
+  score = pred_poss * pred_ppp_a
+  points_a.append(score)
 
-pred_score_a = calculate_score(pred_poss_a, pred_ppp_a)
-pred_score_b = calculate_score(pred_poss_b, pred_ppp_b)
+points_b = []
+for pred_poss in pred_poss_b:
+  score = pred_poss * pred_ppp_b
+  points_b.append(score)
 
 def win_percentage(a_values, b_values):
   a_wins = 0
@@ -17,7 +18,7 @@ def win_percentage(a_values, b_values):
       a_wins += 1
   return a_wins / len(a_values)
 
-pred_wins = win_percentage(pred_score_a, pred_score_b)
+pred_wins = win_percentage(points_a, points_b)
 
 print(f"TEAM A: {team_a_name} ({team_a})")
 print(f"TEAM B: {team_b_name} ({team_b})")
