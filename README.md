@@ -21,6 +21,25 @@ Then a Monte Carlo Simulation, using: mean, variance, and standard deviation is 
 
 Efficiency is calculated using the player efficiency model, in which team performance is adjusted based on opponent performance, and then strength of schedule averages, this is to ensure that a team scoring 15% more efficiently on a bad opponent is not given the same rating as a team scoring 15% more efficiently on a good opponent, the rating works so that PPP (points per possession) and PAPP(points allowed per possession) are inverse, a good PPP will be higher than 1.00, which is the average, and a good PAPP will be lower than 1, which is still the average.
 
+### V0 Testing
+using the 2026 mens march madness tournament as an out of sample emulation (the tournament games were removed from the database) the model produced:
+
+-77.78% accuracy
+
+-A brier score of 0.1547
+
+-A log loss of 0.4651
+
+Notable predictions include:
+
+-Iowa to the Elite 8 (loses to UIUC)
+
+-UCONN eliminated in the Sweet 16 (Mich St)
+
+-Purdue to Final 4 (loses to Michigan)
+
+-Michigan over Duke in National Finals
+
 ### Current Limitations
 Noted shortcoming of the model are as follows:
 
@@ -35,6 +54,6 @@ Noted shortcoming of the model are as follows:
 ### Future Versions
 V1 is expected to be finished on Oct 21. It will include the following:
 
--Proper coefficients and variable relations (determined through xgboost)
+-Proper coefficients and variable relations (determined through ml models)
 
 -Home/Away/Neutral court adjustments
